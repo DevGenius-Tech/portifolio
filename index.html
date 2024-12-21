@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - José Manoel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d1b2a;
+            color: #e0e1dd;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #1b263b;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .sidebar:hover {
+            background: linear-gradient(180deg, #1b263b, #415a77);
+        }
+
+        .sidebar a {
+            color: #e0e1dd;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 15px 0;
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #f4a261;
+            color: #1b263b;
+            transform: scale(1.1);
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        .section {
+            display: none;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        h1, h2 {
+            color: #f4a261;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #1b263b;
+            margin-top: 20px;
+        }
+
+        .icon {
+            margin-right: 8px;
+        }
+
+        a i {
+            margin-right: 5px;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .sidebar a {
+                font-size: 1rem;
+            }
+            .content {
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#perfil" onclick="showSection('perfil')"><i class="fas fa-user icon"></i>Perfil Pessoal</a>
+        <a href="#linguagens" onclick="showSection('linguagens')"><i class="fas fa-code icon"></i>Linguagens</a>
+        <a href="#experiencias" onclick="showSection('experiencias')"><i class="fas fa-briefcase icon"></i>Experiências</a>
+        <a href="#formacoes" onclick="showSection('formacoes')"><i class="fas fa-graduation-cap icon"></i>Formações</a>
+        <a href="#leituras" onclick="showSection('leituras')"><i class="fas fa-book icon"></i>Leituras</a>
+        <a href="#contatos" onclick="showSection('contatos')"><i class="fas fa-envelope icon"></i>Contatos</a>
+    </div>
+
+    <div class="content">
+        <section class="section active" id="perfil">
+            <h1>Perfil Pessoal</h1>
+            <p>Sou apaixonado por criar soluções web que unem design e desenvolvimento, transformando ideias em experiências digitais funcionais e atraentes. Tenho as melhores formações da região, que me proporcionaram uma sólida base técnica e criativa. Comprometo-me a manter boas práticas, tanto nos códigos que desenvolvo quanto na cultura colaborativa da empresa, garantindo qualidade e inovação em cada projeto.</p>
+        </section>
+
+        <section class="section" id="linguagens">
+            <h2>Linguagens</h2>
+            <ul>
+                <li>PHP</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </section>
+
+        <section class="section" id="experiencias">
+            <h2>Experiências</h2>
+            <p>Desenvolvedor Full-Stack para VA Imports</p>
+            <p><em>Ago 2024 - Dez 2024</em></p>
+            <p>Desenvolvimento de front-end e back-end usando PHP, Vue.js, Boostrap e MySQL para VA Imports, uma empresa comercial que vende diversos eletrônicos a partir do site e-commerce criado por mim durante o contrato.</p>
+        </section>
+
+        <section class="section" id="formacoes">
+            <h2>Formações</h2>
+            <ul>
+                <li>Udemy - Curso de PHP</li>
+                <li>SoloLearn - Curso de C</li>
+                <li>SoloLearn - Curso de Python</li>
+                <li>SoloLearn - Curso de C++</li>
+                <li>SoloLearn - Curso de SQL</li>
+                <li>Fundação Bradesco - Introdução à análise de dados - Microsoft Power BI</li>
+                <li>IFPA - Técnico em desenvolvimento de sistemas</li>
+                <li>UNAMA - Análise e Desenvolvimento de Sistemas (cursando)</li>
+            </ul>
+        </section>
+
+        <section class="section" id="leituras">
+            <h2>Leituras</h2>
+            <ul>
+                <li>Código Limpo - Robert C Martin</li>
+                <li>Bootstrap - Um guia completo para construir aplicativos responsivos, modernos e eficientes - Maurício S Silva</li>
+                <li>Programando para Web com PHP/MySQL - Fred Cox Junior</li>
+            </ul>
+        </section>
+
+        <section class="section" id="contatos">
+            <h2>Contatos</h2>
+            <p><a href="https://linkedin.com/in/jos%C3%A9-manoel-a12a67310/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+            <p><i class="fas fa-phone"></i> Telefone: (93) 992273046</p>
+            <a href="./assets/CV DE JOSÉ MANOEL.pdf" download="CV_JOSÉ.pdf">Baixar Currículo</a>
+                
+        </section>
+
+        <footer>
+            &copy; 2024 José Manoel. Todos os direitos reservados.
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
